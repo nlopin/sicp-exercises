@@ -16,6 +16,12 @@
   (product-iter a 1)
 )
 
-(define (identity x) x)
-(define (next x) (+ 1 x))
-(product-fast 1 5 identity next)
+; factorial
+; (define (identity x) x)
+; (define (next x) (+ 1 x))
+; (product-fast 1 5 identity next)
+
+; pi / 2 approximation
+(define (term a) (/ (* 4.0 a a) (- (* 4 a a) 1)))
+(define (next a) (+ 1 a))
+(product-fast 1 10 term next)
